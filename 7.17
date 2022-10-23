@@ -1,0 +1,12 @@
+while True:
+    try:
+        name = input('Enter a valid file :\n')
+        in_file = open(name, 'r')
+        calue = in_file.read()
+        print()
+        print('The contents of the file was\n{}'.format(calue))
+        in_file.close()
+        break
+    except FileNotFoundError:
+        print()
+        print(f'File {name} could not be opened.  Try again.\n')
